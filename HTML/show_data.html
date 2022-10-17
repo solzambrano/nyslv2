@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informacion</title>
+    <link rel ="stylesheet" href="../CSS/diseño.css">
+    <link rel ="stylesheet" href ="../CSS/diseño_show.css">
+</head>
+<body>
+<header>
+  <h1>Nortshide Youth Soccer League </h1>
+  <div class="fondo">
+      <img class="imagen" src="../IMAGENES/soccer_image2.jpg" alt="niña jugando">
+      <img src= "../IMAGENES/soccer_image1.jpg" alt="niño jugando">
+      <img src="../IMAGENES/soccer_image3.jpg" alt="niños jugando">
+      <img src= "../IMAGENES/soccer_image1.jpg" alt="niño jugando">    
+      <img class="imagen" src="../IMAGENES/soccer_image2.jpg" alt="niña jugando">
+  </div>    
+</header>
+<div class ="cinta">
+  <h2>  Informacion Recibida</h2>
+  <img class = "logo" src="../IMAGENES/nysl_logo.png" alt="logo_pelota">
+</div>
+
+<table id="valores">
+  <tr>
+    <th>Form Field</th>
+    <th>Field Value</th>
+  </tr>
+
+<script language="javascript">
+var args = location.search.substr(1).split('&');
+for (var i = 0; i < args.length; ++i) {
+  var parts = args[i].split('=');
+  if (parts != null) {
+    var field = parts[0];
+    var value = parts[1];
+    if (value == null) {
+      value = "null"
+    }
+    else {
+      value = '"' + unescape(value.replace(/\+/g, ' ')) + '"';
+    }
+
+    document.writeln('<tr><td align="center">' + field + '</td>');
+    document.writeln('<td align="center">' + value + '</td></tr>');
+  }
+}
+</script>
+
+<noscript>
+<tr><td>
+
+</td></tr>
+</noscript>
+
+</table>
+<section id="boton">
+  <a href="../HTML/registration.html">Volver</a>
+</section>
+</body>
+</html>
